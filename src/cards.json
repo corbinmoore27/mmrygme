@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Dash",
+      "image": "./pics/dash.png"
+    },
+    {
+      "id": 2,
+      "name": "Edna Mode",
+      "image": "./pics/ednamode.png"
+    },
+    {
+      "id": 3,
+      "name": "Frozone",
+      "image": "./pics/frozone.png"
+    },
+    {
+      "id": 4,
+      "name": "Jack Jack",
+      "image": "./pics/jackjack.png"
+    },
+    {
+      "id": 5,
+      "name": "Mr. Huph",
+      "image": "./pics/mrhuph.png"
+    },
+    {
+      "id": 6,
+      "name": "Mr. Incredible",
+      "image": "./pics/mrincredible.png"
+    },
+    {
+      "id": 7,
+      "name": "Mrs. Incredible",
+      "image": "./pics/mrsincredible.png"
+    },
+    {
+      "id": 8,
+      "name": "Syndrome",
+      "image": "./pics/syndrome.png"
+    },
+    {
+      "id": 9,
+      "name": "Violet",
+      "image": "./pics/violet.png"
+    },
+    {
+      "id": 10,
+      "name": "The Incredibles",
+      "image": "./pics/family.png"
+    }
+  ]
+  
