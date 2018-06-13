@@ -18,11 +18,22 @@ class App extends Component {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     const cards = this.state.cards.filter(card => card.id !== id);
     // Set this.state.friends equal to the new friends array
+    console.log(cards)
+    console.log(this.state.guessed);
     this.setState({ counter: this.state.counter + 1 });
+    this.highScoreCheck();
+    this.randomizeCards();
+    
+  };
+
+  randomizeCards = cards => {
+    var shuffled = this.state.cards.sort(function() {
+      return Math.random() - 0.5;
+    })
   };
 
   highScoreCheck = () => {
-    if (this.state.counter > this.state.hScore) {
+    if (this.state.counter >= this.state.hScore) {
       this.setState({hScore: this.state.counter})
     }
   }
@@ -33,7 +44,7 @@ class App extends Component {
         <Title
           counter={this.state.counter}
           hScore={this.state.hScore}>
-          Memory Game</Title>
+          The Incredibles Memory Game</Title>
         {this.state.cards.map(card => (
           <MemoryCard
             removeCard={this.removeCard}
