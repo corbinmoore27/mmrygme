@@ -1,5 +1,5 @@
 import React from "react";
-import "./FriendCard.css";
+import "./MemoryCard.css";
 
 const MemoryCard = props => (
   <div className="card" onClick={() => props.cardClick(props.id)}>
