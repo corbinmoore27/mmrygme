@@ -9,9 +9,11 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     cards,
-    counter: 0
+    counter: 0,
+    guessed: [],
+    hScore: 0
   };
-
+  
   cardClick = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     const cards = this.state.cards.filter(card => card.id !== id);
@@ -19,13 +21,19 @@ class App extends Component {
     this.setState({ counter: this.state.counter + 1 });
   };
 
+  highScoreCheck = () => {
+    if (this.state.counter > this.state.hScore) {
+      this.setState({hScore: this.state.counter})
+    }
+  }
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
-        <Title>Memory Game
-        counter={this.state.counter}
-        </Title>
+        <Title
+          counter={this.state.counter}
+          hScore={this.state.hScore}>
+          Memory Game</Title>
         {this.state.cards.map(card => (
           <MemoryCard
             removeCard={this.removeCard}

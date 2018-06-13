@@ -4,5 +4,11 @@
   font-size: 3rem;
   text-decoration: underline;
   color: rgb(169, 49, 49);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+.header {
+  width: 100%
+}
+.scores {
+  text-align: center
 }
