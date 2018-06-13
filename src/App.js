@@ -18,12 +18,22 @@ class App extends Component {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     const cards = this.state.cards.filter(card => card.id !== id);
     // Set this.state.friends equal to the new friends array
-    console.log(cards)
-    console.log(this.state.guessed);
-    this.setState({ counter: this.state.counter + 1 });
-    this.highScoreCheck();
-    this.randomizeCards();
-    
+   
+    // if ((this.state.guessed).length < 1) {
+    //   (this.state.guessed).push(id);
+    //   this.setState({ counter: this.state.counter + 1 });
+    //   this.highScoreCheck();
+    //   this.randomizeCards();
+    // } 
+    if ((this.state.guessed).includes(id)) {
+      this.setState({counter: 0})
+      this.render();
+    } else {(this.state.guessed).push(id);
+      this.setState({ counter: this.state.counter + 1 });
+      this.highScoreCheck();
+      this.randomizeCards();
+
+    }
   };
 
   randomizeCards = cards => {
